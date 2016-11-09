@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wireframe w/ Framework</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <style>
+    body {
+      padding: 2rem 8rem;
+      background: url("http://www.hdnicewallpapers.com/Walls/Big/Nature%20and%20Landscape/Super_Best_Nature_Big_Jungle_HD_Images.jpg");
+    }
+
+    h1 {
+      font-size: 6rem;
+      margin-bottom: 3rem;
+    }
+
+    hr {
+      display: none;
+    }
+
+    .images {
+      margin-top: 3rem;
+    }
+
+    main {
+      padding-top: 0.7rem;
+      padding-bottom: 1.5rem;
+      opacity: 0.94;
+      border-radius: 1%;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    section.mobile {
+      display: none;
+    }
+
+    @media (max-width: 800px) {
+
+      body {
+        padding: 1rem 1rem;
+      }
+
+      h1 {
+        font-size: 4rem;
+      }
+
+      .col {
+        margin-bottom: 1rem 0;
+      }
+
+      hr {
+        display: block;
+      }
+
+      section.images {
+        display: none;
+      }
+
+      section.mobile {
+        display: block;
+      }
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <main class="blue-grey lighten-4">
+      <div class="">
+        <h1 class="center-align">Advanced Widget Inc.</h1>
+        <hr>
+        <section class="row images">
+          <div class="col s8 offset-s2 m3 center-align">
+            <img class="responsive-img" src="https://placebear.com/200/200" alt="">
+            <span class="card">A caption for a picture</span>
+          </div>
+          <div class="col s8 offset-s2 m3 center-align">
+            <img class="responsive-img" src="https://placeimg.com/200/200/any" alt="">
+            <span class="card">A second caption for another picture</span>
+          </div>
+          <div class="col s8 offset-s2 m3 center-align">
+            <img class="responsive-img" src="https://placeimg.com/200/200/animals" alt="">
+            <span class="card">Widget factory</span>
+          </div>
+          <div class="col s8 offset-s2 m3 center-align">
+            <img class="responsive-img" src="https://placeimg.com/200/200/arch" alt="">
+            <span class="card">Industry leader</span>
+          </div>
+        </section>
+        <section class="slider mobile">
+          <ul class="slides">
+            <li>
+              <img src="https://placebear.com/200/200" alt="">
+              <div class="caption left-align">
+                <h3>Top employees</h3>
+              </div>
+            </li>
+            <li>
+              <img src="https://placeimg.com/200/200/any" alt="">
+              <div class="caption">
+                <h3>Experts from everywhere</h3>
+              </div>
+            </li>
+            <li>
+              <img src="https://placeimg.com/200/200/animals" alt="">
+              <div class="caption">
+                <h3>Widget factory</h3>
+              </div>
+            </li>
+            <li>
+              <img src="https://placeimg.com/200/200/arch" alt="">
+              <div class="caption">
+                <h3>Industry leader</h3>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="row">
+          <article class="card col s12 m10 l10 offset-m1 offset-l1">
+            <div class="card-content">
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="http://hammerjs.github.io/dist/hammer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script>
+      var $slider = $('.slider');
+      $(document).ready(function () {
+          $slider.slider({full_width: true});
+      });
+      var hammertime = new Hammer($slider);
+      // hammertime.on('swipe');
+    </script>
+  </body>
+</html>
